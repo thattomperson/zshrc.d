@@ -20,6 +20,6 @@
   for f in ${(o)conf_files}; do
     # ignore files that begin with a tilde
     case ${f:t} in '~'*) continue;; esac
-    source "$f"
+    zsh-defer source "$f"
   done
 }
